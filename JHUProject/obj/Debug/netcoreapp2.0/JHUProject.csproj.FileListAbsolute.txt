@@ -1,0 +1,11 @@
+c:\users\yle\source\repos\JHUProject\JHUProject\bin\Debug\netcoreapp2.0\JHUProject.deps.json
+c:\users\yle\source\repos\JHUProject\JHUProject\bin\Debug\netcoreapp2.0\JHUProject.runtimeconfig.json
+c:\users\yle\source\repos\JHUProject\JHUProject\bin\Debug\netcoreapp2.0\JHUProject.runtimeconfig.dev.json
+c:\users\yle\source\repos\JHUProject\JHUProject\bin\Debug\netcoreapp2.0\JHUProject.dll
+c:\users\yle\source\repos\JHUProject\JHUProject\bin\Debug\netcoreapp2.0\JHUProject.pdb
+c:\users\yle\source\repos\JHUProject\JHUProject\obj\Debug\netcoreapp2.0\JHUProject.csprojResolveAssemblyReference.cache
+c:\users\yle\source\repos\JHUProject\JHUProject\obj\Debug\netcoreapp2.0\JHUProject.csproj.CoreCompileInputs.cache
+c:\users\yle\source\repos\JHUProject\JHUProject\obj\Debug\netcoreapp2.0\JHUProject.AssemblyInfoInputs.cache
+c:\users\yle\source\repos\JHUProject\JHUProject\obj\Debug\netcoreapp2.0\JHUProject.AssemblyInfo.cs
+c:\users\yle\source\repos\JHUProject\JHUProject\obj\Debug\netcoreapp2.0\JHUProject.dll
+c:\users\yle\source\repos\JHUProject\JHUProject\obj\Debug\netcoreapp2.0\JHUProject.pdb

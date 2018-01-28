@@ -1,0 +1,97 @@
+﻿@model JHUProject.Models.Patient
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RegisterDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RegisterDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Biopsies)
+        </dt>
+        <dd>
+            <p>
+                <a asp-controller="Biopsies" asp-action="BiopsyList" asp-route-patientID="@Model.PatientID">List View</a>
+            </p>
+            <table class="table">
+
+                <tr>
+                    <th>Medical Record Number</th>
+                    <th>Date of Service</th>
+                    <th>Biopsy Site</th>
+                    <th>Clinician Name</th>
+                    <th>Created Date</th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model.Biopsies)
+        {
+                <tr>
+                <td>
+                    @Html.DisplayFor(model => item.RecordNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.ServiceDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.BiopsySite)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Clinician.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.CreatedDate)
+                </td>
+                <td>
+                    <a asp-controller="Biopsies" asp-action="Edit" asp-route-id="@item.BiopsyID">Edit</a> |
+                    <a asp-controller="Biopsies" asp-action="Details" asp-route-id="@item.BiopsyID">Details</a> |
+                    <a asp-controller="Biopsies" asp-action="Delete" asp-route-id="@item.BiopsyID">Delete</a>
+                </td>
+                
+            </tr>
+}
+            </table>
+            <p>
+                <a asp-controller="Biopsies" asp-action="CreateWithID" asp-route-patientID="@Model.PatientID">Add Biopsy</a>
+            </p>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PatientID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

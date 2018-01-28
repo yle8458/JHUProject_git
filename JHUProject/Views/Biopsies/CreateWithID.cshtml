@@ -1,0 +1,58 @@
+﻿@model JHUProject.Models.Biopsy
+
+@{
+    ViewData["Title"] = "Create Biopsy";
+}
+
+<h2>Create</h2>
+
+<h4>Biopsy</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateWithID">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Patient" class="control-label"></label>
+                <input type="hidden" asp-for="PatientID"/>
+                <p>@ViewData["PatientName"]</p>
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="ClinicianID" class="control-label"></label>
+                <select asp-for="ClinicianID" class="form-control" asp-items="ViewBag.ClinicianID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="RecordNumber" class="control-label"></label>
+                <input asp-for="RecordNumber" class="form-control" />
+                <span asp-validation-for="RecordNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServiceDate" class="control-label"></label>
+                <input asp-for="ServiceDate" class="form-control" />
+                <span asp-validation-for="ServiceDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BiopsySite" class="control-label"></label>
+                <input asp-for="BiopsySite" class="form-control" />
+                <span asp-validation-for="BiopsySite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedDate" class="control-label"></label>
+                <input asp-for="CreatedDate" class="form-control" />
+                <span asp-validation-for="CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="BiopsyList" asp-route-patientID="@ViewData["PatientID"]">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
